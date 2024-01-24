@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { auth } from '../firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import {Link} from 'react-router-dom';
+import {Link,useNavigate} from 'react-router-dom';
 import Login from './Login';
 import '../Style/Sigin.css';
 
@@ -10,14 +10,14 @@ const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const signUp = async () => {
     try {
-      // Use createUserWithEmailAndPassword to sign up a new user
+
       await createUserWithEmailAndPassword(auth, email, password);
-      
+      navigate('/login');
     } catch (err) {
-      
       setError(err.message);
     }
   };

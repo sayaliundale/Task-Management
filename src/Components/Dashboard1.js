@@ -3,6 +3,7 @@ import { signOut } from 'firebase/auth';
 import { auth, db } from '../firebase';
 import { useNavigate } from 'react-router-dom';
 import { collection, getDocs, addDoc, deleteDoc, doc } from 'firebase/firestore';
+import '../Style/Dashbaord.css';
 
 const Dashboard1 = () => {
     const navigate = useNavigate();
@@ -10,7 +11,7 @@ const Dashboard1 = () => {
     const [taskTitle, setTaskTitle] = useState('');
     const [taskDescription, setTaskDescription] = useState('');
     const [dueDate, setDueDate] = useState('');
-    const [showAddTaskForm, setShowAddTaskForm] = useState(false); 
+    const [showAddTaskForm, setShowAddTaskForm] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const taskRef = collection(db, "Tasks");
 
@@ -27,18 +28,17 @@ const Dashboard1 = () => {
 
     useEffect(() => {
         getTaskList();
-    }, []);
+    });
 
     const addtask = () => {
-        setShowAddTaskForm(true); 
+        setShowAddTaskForm(true);
     }
 
     const submitTask = async () => {
         if (!taskTitle || !taskDescription || !dueDate) {
             setErrorMessage('Please fill in all required fields.');
             return;
-        }   
-        
+        }
 
         try {
             await addDoc(taskRef, {
@@ -52,7 +52,7 @@ const Dashboard1 = () => {
             setDueDate('');
 
             getTaskList();
-            setShowAddTaskForm(false); 
+            setShowAddTaskForm(false);
         } catch (err) {
             console.error(err);
         }
@@ -109,8 +109,8 @@ const Dashboard1 = () => {
                             <p>DueDate : <input
                                 type="date"
                                 value={dueDate}
-                                onChange={(e) => setDueDate(e.target.value)} 
-                            required/></p>
+                                onChange={(e) => setDueDate(e.target.value)}
+                                required /></p>
                             {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
                             <button id="submit-btn" onClick={submitTask}>Submit Task</button>
                         </div>
