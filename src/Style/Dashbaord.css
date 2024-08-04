@@ -16,102 +16,118 @@ h2 {
 #btn {
   background-color: rgb(28, 69, 232);
 }
-#btn1, #submit-btn{
-  width:8rem;
+
+#btn1,
+#submit-btn {
+  width: 8rem;
   background-color: rgb(134, 244, 83);
 }
-.header{
-  width:100%;
-  height:6rem;
+
+.header {
+  width: 100%;
+  height: 6rem;
 }
+
 .logout {
-  width:7%;
-  float:right;
+  width: 7%;
+  float: right;
   margin-right: 5rem;
   margin-top: 2rem;
   font-size: 1.1rem;
-  
+
 }
-.title{
-  width:93%;
-  height:5rem;
+
+.title {
+  width: 93%;
+  height: 5rem;
   background-color: rgb(233, 249, 255);
   margin-left: 3%;
   border-radius: 0.5rem;
-  display:flex;
- 
+  display: flex;
+
 }
+
 .task-board {
- 
-  float:left;
-  margin:1.5rem 5rem;
+
+  float: left;
+  margin: 1.5rem 5rem;
   font-size: 1.5rem;
- 
+
 }
 
 .addtask {
-  
-  width:2rem;
-  height:2rem;
+
+  width: 2rem;
+  height: 2rem;
   margin-left: auto;
-  margin:1.5rem;
+  margin: 1.5rem;
   font-size: 1.7rem;
   padding: 0;
 
 }
-.tasks{
-  margin:2rem;
+
+.tasks {
+  margin: 2rem;
   margin-right: 5%;
   margin-left: 3%;
-  padding:2rem;
-  border:1px solid black;
-  width:auto;
-  display:flex;
+  padding: 2rem;
+  border: 1px solid black;
+  width: auto;
+  display: flex;
   flex-wrap: wrap;
-  gap:3rem;
+  gap: 3rem;
 }
-.task, .task-form{
-  width:25rem;
-  height:auto;
-  
-  border:1px solid rgb(128, 128, 128);
-  border-radius:0.3rem;
+
+.task,
+.task-form {
+  width: 25rem;
+  height: auto;
+
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 0.3rem;
   border-left: 0.4rem solid rgb(7, 141, 213);
   max-height: auto;
   padding-bottom: 2rem;
-  
+
 }
-.task p, .task-form p {
+
+.task p,
+.task-form p {
   margin: 1rem;
   font-size: 1.1rem;
-  text-align: left; 
+  text-align: left;
 }
-.task span{
+
+.task span {
   font-weight: 500;
   font-size: 1.2rem;
 }
-.task-form input{
+
+.task-form input {
   width: 70%;
-  border:none;
-  outline:none;
+  border: none;
+  outline: none;
   border-bottom: 1px solid rgb(126, 126, 126);
-  height:1.3rem;
+  height: 1.3rem;
   max-height: 3rem;
-  font-size:1.1rem;
+  font-size: 1.1rem;
 }
-.task-form p{
+
+.task-form p {
   line-height: 1rem;
   font-weight: 500;
 }
-.task :nth-child(2){
-  
-  max-width:25rem;
+
+.task :nth-child(2) {
+
+  max-width: 25rem;
   overflow-x: hidden;
-  max-height:8rem;
+  max-height: 8rem;
   overflow-y: "auto";
-  word-wrap: break-word; 
+  word-wrap: break-word;
 }
-.task-form:nth-child(1) textarea{
+
+.task-form:nth-child(1) textarea {
   padding: "0.5rem";
   min-Height: "3rem";
   max-height: "6rem";
